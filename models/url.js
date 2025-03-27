@@ -15,6 +15,11 @@ const urlSchema = new mongoose.Schema({
        timestamps: {type: Number}
     }],
 
+    createdBy: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "user", 
+    },
+
 },{timestamps: true})
 
 const URL = mongoose.model('URL', urlSchema)
